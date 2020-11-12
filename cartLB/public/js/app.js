@@ -49886,8 +49886,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\School\web base\Shopping-Cart\cartLB\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\School\web base\Shopping-Cart\cartLB\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Cart2020C\VS\cartL8\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Cart2020C\VS\cartL8\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -17,9 +17,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/insertCategory', function () {
+    return view('insertCategory');
+});
+
 Route::get('/contactus', function () {
     return view('contact');
 });
+
+
+
+Route::post('/insertCategory/store', [App\Http\Controllers\CategoryController::class, 'store'])->name('addCategory');
+
 
 Auth::routes();
 

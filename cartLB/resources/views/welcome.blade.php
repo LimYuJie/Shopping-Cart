@@ -21,39 +21,48 @@
         </style>
     </head>
     <body class="antialiased">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <img src="{{asset('image/promotion_03.jpg')}}" alt="" class="img-fluid" width=100%  > 
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+            @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endif
+                </div>
+            @endif
+
+            
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img src="{{ asset('images/promotion_03.jpg')}}" alt="" class="img-fluid" width=100%  > 
+                    </div>                    
+                </div>                        
+
+                <div class="row" style="margin-top:20px;">
+                    <div class="col-sm-4" style="text-align: center;">
+                        <img src="{{ asset('images/samsungPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
+                        <p>SAMSUNG</p>
+                    </div>
+                    <div class="col-sm-4" style="text-align: center">
+                        <img src="{{ asset('images/xiaomiPhone.jpg')}}" width=50% alt="" class="img-fluid"> 
+                        <p>XIAOMI</p>           
+                    </div>
+                    <div class="col-sm-4" style="text-align: center" >
+                        <img src="{{ asset('images/vivoPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
+                        <p>VIVO</p>
+                    </div>                
+                </div>
+                    
             </div>
+
+            
         </div>
-
-
-        <div class="row" style="margin-top:20px;">
-            <div class="col-sm-4" style="text-align: center;">
-            <img src="{{asset('image/samsungPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
-                <p>SAMSUNG</p>
-            </div>
-             <div class="col-sm-4" style="text-align: center">
-             <img src="{{asset('image/xiaomiPhone.jpg')}}" width=50% alt="" class="img-fluid"> 
-                <p>XIAOMI</p>
-            </div>
-            <div class="col-sm-4" style="text-align: center" >
-                <img src="{{asset('image/vivoPhone.jpg')}}" width=50% alt="" class="img-fluid" > 
-                <p>VIVO</p>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="container-fluid">
-            <div class="copyright text-center">
-              &copy; Copyright <strong>ABC company</strong>. All Rights Reserved
-            </div>
-            <div class="credits text-center">
-              Designed by <a href="https://abc.com/%22%3EABC Company</a>
-            </div>
-    </div>
-
     </body>
 </html>
